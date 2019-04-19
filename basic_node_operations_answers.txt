@@ -1,0 +1,40 @@
+1. Run the commands sort, wc and uniq on the commands.js file. Explain output:
+
+Sort: Returns file with lines sorted alphabetically. 
+WC: Returns the line, word, and byte counts for the file. 
+Uniq: Returns uniq lines from files removing all duplicate lines.  
+
+2. Using the pipe (|) connect at least two commands and run it on commands.js. Explain output:
+
+I piped wc and head together. Since the file was largely reduced due to the 'head' command, it reduced the results to 10 lines, 24 words, and 211 bytes. 
+
+6. Reverse Words in String:
+
+Method One: 
+let inputString = "I'm learning to program algorithms!"
+
+const reverseString = (inputString) => {
+    let splitString = inputString.split("");
+    let reversedStore = [];
+    splitString.forEach((element) => {
+        reversedStore.push(element);
+    });
+    reversedStore.reverse();
+    let reversedString = reversedStore.join("");
+    return reversedString;
+}
+
+console.log(reverseString(inputString));
+
+--- ---
+
+Method Two: 
+let inputString = "I'm learning to program algorithms!"
+
+function reverseString(inputString) {
+  return inputString.split("").reverse().join("").split(" ").reverse().join(" ")  
+}
+
+console.log(reverseString(inputString));
+
+
